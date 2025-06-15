@@ -45,7 +45,7 @@ class Emu:
          0xF0, 0x80, 0xF0, 0x80, 0xF0, # E
          0xF0, 0x80, 0xF0, 0x80, 0x80, # F
       ]
-      self.registers = [0] * 16
+      self.registers = bytearray(16)
       self.ram = bytearray(4096)
       self.stack = [0] * 16
       self.buffer = bytearray(DISPLAY_W*DISPLAY_H)
